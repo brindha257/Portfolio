@@ -7,7 +7,7 @@ const Hero = () => {
         {/* Profile Image - Add your photo here */}
         <div className="flex justify-center mb-6">
           <img 
-            src="./src/assets/profile.jpg"  /* Change this to your image path */
+            src="/profile.jpg"  /* Change this to your image path */
             alt="Brindha K"
             className="w-30 h-30 md:w-40 md:h-40 rounded-full object-cover border-2 border-white shadow-2xl"
           />
