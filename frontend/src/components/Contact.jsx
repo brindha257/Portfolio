@@ -23,7 +23,7 @@ const Contact = () => {
             <div className="space-y-3 text-gray-600">
               <p>📞 9342313921</p>
               <p>📧 brindhakamaraj2006@gmail.com</p>
-              <p>📍 Veppampattu, Thiruvallur</p>
+              <p>📍 Chennai</p>
               <p>🔗 <a href="https://github.com/brindha257" className="text-slate-900 hover:underline" target="_blank" rel="noopener noreferrer">github.com/brindha257</a></p>
             </div>
           </div>
