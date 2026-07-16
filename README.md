@@ -11,13 +11,13 @@
 # Education details
 # Certifications sections
 # Contact Form
-# Frontend
+# -Frontend
 --React.js
 --Tailwind CSS
 --HTML
 --CSS
 --JavaScript
-#Backend
+# -Backend
 --Node.js
 --Express.js
 # Portfolio Preview
