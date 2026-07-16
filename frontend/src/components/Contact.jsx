@@ -1,42 +1,54 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Message sent! (Backend integration ready)');
-    setFormData({ name: '', email: '', message: '' });
-  };
+  const contactItems = [
+    { icon: '📞', label: 'Phone', value: '9342313921', href: 'tel:9342313921' },
+    { icon: '📧', label: 'Email', value: 'brindhakamaraj2006@gmail.com', href: 'mailto:brindhakamaraj2006@gmail.com' },
+    { icon: '📍', label: 'Location', value: 'Chennai', href: null },
+    { icon: '🔗', label: 'GitHub', value: 'github.com/brindha257', href: 'https://github.com/brindha257' }
+  ];
 
   return (
     <section className="py-16 px-6 bg-slate-600" id="contact">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Contact Me</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white p-6 rounded-xl shadow-md">
-            <h3 className="text-xl font-bold mb-4 text-slate-600">Get in Touch</h3>
-            <div className="space-y-3 text-gray-600">
-              <p>📞 9342313921</p>
-              <p>📧 brindhakamaraj2006@gmail.com</p>
-              <p>📍 Chennai</p>
-              <p>🔗 <a href="https://github.com/brindha257" className="text-slate-900 hover:underline" target="_blank" rel="noopener noreferrer">github.com/brindha257</a></p>
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-white p-8 rounded-2xl shadow-xl">
+            <h3 className="text-2xl font-bold mb-6 text-slate-700 border-b border-gray-200 pb-4">
+              Get in Touch
+            </h3>
+            <div className="space-y-5">
+              {contactItems.map((item, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-11 h-11 flex items-center justify-center bg-purple-100 rounded-full text-xl">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400 uppercase tracking-wide font-medium">
+                      {item.label}
+                    </p>
+                                      
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target={item.href.startsWith('http') ? '_blank' : undefined}
+                        rel="noopener noreferrer"
+                        className="text-slate-700 font-medium hover:text-purple-700 hover:underline transition"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-slate-700 font-medium">{item.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-md space-y-4">
-            <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required />
-            <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required />
-            <textarea name="message" placeholder="Your Message" rows="4" value={formData.message} onChange={handleChange} className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required></textarea>
-            <button type="submit" className="w-full bg-slate-600 text-white py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">Send Message</button>
-          </form>
         </div>
       </div>
     </section>
   );
 };
 
-export default Contact
+export default Contact;
