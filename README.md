@@ -1,4 +1,4 @@
-#Personal Portfolio Website
+# Personal Portfolio Website
 
 #A responsive and modern MERN Stack Portfolio Website developed to showcase my skills, projects, education, certifications, and contact information.
 #This portfolio represents my journey as a Computer Science Student and an aspiring MERN Stack Developer.
