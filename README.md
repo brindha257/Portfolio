@@ -3,18 +3,14 @@
 #A responsive and modern MERN Stack Portfolio Website developed to showcase my skills, projects, education, certifications, and contact information.
 #This portfolio represents my journey as a Computer Science Student and an aspiring MERN Stack Developer.
 
-# Features
-# Home Section with introduction
-# About Me section
-# Skills showcase
-# Projects section
-# Education details
-# Certifications section
-# Contact form
-# Fully Responsive Design
-# Smooth Navigation UI
-# Modern and clean interface
-# Tech Stack
+#Features
+#Home Swection and Introduction
+#About me section
+#Skills showcase
+#Projects section 
+#Education details
+#Certifications sections
+#Contact Form
 #Frontend
 React.js
 Tailwind CSS
